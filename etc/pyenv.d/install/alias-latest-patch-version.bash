@@ -3,12 +3,11 @@
 # before_install_func() {
 # }
 
+# Detect if the installation command made use of the `M.m:latest` format, and if so, create a symlink that points
+# `M.m` to the `M.m.p` directory that was installed.
 after_install_func() {
-    # echo "DEFINITION_PREFIX=${DEFINITION_PREFIX} DEFINITION=${DEFINITION} PREFIX=${PREFIX}"
     if [ "${DEFINITION}" != "${DEFINITION_PREFIX}" ]; then
-    # DEFINITION_PREFIX=3.11 DEFINITION=3.11.0a4 PREFIX=/home/brandon/.pyenv/versions/3.11.0a4
         echo "Setting alias '${DEFINITION_PREFIX}' for '${PREFIX}'"
-        echo "ln -sf ${DEFINITION} ${PREFIX}/../${DEFINITION_PREFIX}"
         ln -sf "${DEFINITION}" "${PREFIX}/../${DEFINITION_PREFIX}"
     fi
 }
