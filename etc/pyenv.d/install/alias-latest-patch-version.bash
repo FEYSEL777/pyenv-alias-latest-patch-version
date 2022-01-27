@@ -1,7 +1,7 @@
 # See https://github.com/pyenv/pyenv/wiki/Authoring-plugins
 
-before_install_func() {
-}
+# before_install_func() {
+# }
 
 after_install_func() {
     # echo "DEFINITION_PREFIX=${DEFINITION_PREFIX} DEFINITION=${DEFINITION} PREFIX=${PREFIX}"
@@ -13,5 +13,5 @@ after_install_func() {
     fi
 }
 
-before_install 'before_install_func'
+# before_install "before_install_func"
 after_install "after_install_func"
