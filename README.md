@@ -3,6 +3,6 @@
 
 ## Installation
 ```
-git clone https://github.com/upside-services/pyenv-alias-latest-patch-version.git $(pyenv root)/plugins/pyenv-alias-latest-patch-version
+git -C $(pyenv root)/plugins clone https://github.com/upside-services/pyenv-alias-latest-patch-version.git
 ```
 
